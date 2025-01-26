@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        #result {
+            padding: 20px;
+            border: 1px solid #d4edda;
+            background-color: #d4edda;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .btn {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Classification Result</h1>
+    <div id="result">
+        <p><strong>Farmer Name:</strong> {{ farmer_name }}</p>
+        <p><strong>Predicted Disease:</strong> {{ result }}</p>
+        <p><strong>Confidence Level:</strong> {{ confidence }}%</p>
+        <p><strong>Uploaded Image:</strong></p>
+        <img src="{{ url_for('static', filename='uploads/' + filename) }}" alt="Uploaded Image" width="256" height="256">
+
+    </div>
+
+    <a href="/" class="btn">Back to Home</a>
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const result = document.querySelector("#result");
+            if (result) {
+                result.style.transition = "background-color 1s ease";
+                setTimeout(() => {
+                    result.style.backgroundColor = "transparent";
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

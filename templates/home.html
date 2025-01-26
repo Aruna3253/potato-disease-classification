@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Disease Classifier</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        p {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            display: block;
+            transition: background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        form input[type="text"], form input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        form button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.2em;
+        }
+
+        form button:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .contact-info {
+            margin-top: 10px;
+        }
+
+        .contact-info a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Potato Disease Classifier</h1>
+        <p>Upload a potato leaf image to detect diseases like Late Blight and Early Blight.</p>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/admin/login">Admin Login</a></li>
+            <li><a href="/feedback">Feedback</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Upload Potato Leaf Image</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="farmer_name">Farmer Name:</label>
+            <input type="text" name="farmer_name" required>
+            <label for="image">Upload Image:</label>
+            <input type="file" name="image" accept="image/*" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <!-- Footer with Contact Info -->
+    <footer>
+        <p>&copy; 2024 Potato Disease Classifier. All Rights Reserved.</p>
+
+        <!-- Contact Info Section -->
+        <div class="contact-info">
+            <p>Contact Us:</p>
+            <p>Email: <a href="mailto:contact@potatodisease.com">contact@potatodisease.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 234-567-890</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
