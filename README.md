@@ -129,7 +129,7 @@ Plantvillage/
 3. results of using model.keras trained file with all ml libraries:
     ![image](https://github.com/user-attachments/assets/e26480a2-5694-416e-bb17-2b9f69ac1e71)
 
-     ![Screenshot (283)](https://github.com/user-attachments/assets/2041c155-f575-43fa-bcfc-bebd9207fdbf)
+   ![Screenshot (282)](https://github.com/user-attachments/assets/1f31a975-0c47-4a52-a96a-c749e17b6180)
 
 
 
